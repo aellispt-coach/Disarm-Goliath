@@ -2,25 +2,25 @@ const TEST_MODE = false;
 
 const phases = [
   {
-    bgImage: 'images/phase1.jpg',
+    bgImage: 'Images/phase1.jpg',
     albumTitle: 'Something Is Coming',
     bodyClass: 'phase-1',
     dropTime: new Date('2026-06-29T23:00:00Z')
   },
   {
-    bgImage: 'images/phase2.jpg',
+    bgImage: 'Images/phase2.jpg',
     albumTitle: 'Something Is Coming',
     bodyClass: 'phase-2',
     dropTime: new Date('2026-07-06T23:00:00Z')
   },
   {
-    bgImage: 'images/phase3.jpg',
+    bgImage: 'Images/phase3.jpg',
     albumTitle: 'Something Is Coming',
     bodyClass: 'phase-3',
     dropTime: new Date('2026-07-13T23:00:00Z')
   },
   {
-    bgImage: 'images/phase4.jpg',
+    bgImage: 'Images/phase4.jpg',
     albumTitle: 'Fighting Talk',
     bodyClass: 'phase-4',
     dropTime: new Date('2026-07-20T23:00:00Z')
