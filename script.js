@@ -1,4 +1,4 @@
-const TEST_MODE = false;
+const TEST_MODE = true;
 
 const phases = [
   {
