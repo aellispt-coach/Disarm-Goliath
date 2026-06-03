@@ -37,16 +37,9 @@ function getCurrentPhaseIndex() {
   return phases.length - 1;
 }
 
-const phaseIndex = getCurrentPhaseIndex();
-const phase = phases[phaseIndex];
-
-if (TEST_MODE) {
-  phase.dropTime = new Date(Date.now() + 60000);
-}
-
-const bgImageEl    = document.getElementById('bg-image');
-const albumTitleEl = document.getElementById('album-title');
-const countdownEl  = document.getElementById('countdown');
+const bgImageEl     = document.getElementById('bg-image');
+const albumTitleEl  = document.getElementById('album-title');
+const countdownEl   = document.getElementById('countdown');
 const finalRevealEl = document.getElementById('final-reveal');
 
 const numEls = {
@@ -55,10 +48,6 @@ const numEls = {
   minutes: document.getElementById('minutes'),
   seconds: document.getElementById('seconds')
 };
-
-document.body.classList.add(phase.bodyClass);
-bgImageEl.style.backgroundImage = `url('${phase.bgImage}')`;
-albumTitleEl.textContent = phase.albumTitle;
 
 function pad(n) {
   return String(n).padStart(2, '0');
@@ -70,12 +59,24 @@ function triggerFlip(el) {
   el.style.animation = 'flip 0.28s ease';
 }
 
-const prev = { days: null, hours: null, minutes: null, seconds: null };
 const KEYS = ['days', 'hours', 'minutes', 'seconds'];
 let ticker;
+let currentPhaseIndex;
+let currentPhase;
+let prev;
+
+function applyPhase(index) {
+  phases.forEach(p => document.body.classList.remove(p.bodyClass));
+  currentPhaseIndex = index;
+  currentPhase = phases[index];
+  prev = { days: null, hours: null, minutes: null, seconds: null };
+  document.body.classList.add(currentPhase.bodyClass);
+  bgImageEl.style.backgroundImage = currentPhase.bgImage ? `url('${currentPhase.bgImage}')` : '';
+  albumTitleEl.textContent = currentPhase.albumTitle;
+}
 
 function tick() {
-  const diff = phase.dropTime.getTime() - Date.now();
+  const diff = currentPhase.dropTime.getTime() - Date.now();
 
   if (diff <= 0) {
     for (const key of KEYS) {
@@ -85,8 +86,13 @@ function tick() {
         prev[key] = '00';
       }
     }
-    if (phaseIndex === phases.length - 1) {
-      clearInterval(ticker);
+    clearInterval(ticker);
+    const nextIndex = getCurrentPhaseIndex();
+    if (nextIndex !== currentPhaseIndex) {
+      applyPhase(nextIndex);
+      ticker = setInterval(tick, 1000);
+      tick();
+    } else {
       countdownEl.style.display = 'none';
       albumTitleEl.style.display = 'none';
       finalRevealEl.classList.add('visible');
@@ -118,5 +124,6 @@ function tick() {
   }
 }
 
+applyPhase(getCurrentPhaseIndex());
 tick();
 ticker = setInterval(tick, 1000);
