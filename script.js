@@ -1,29 +1,29 @@
-const TEST_MODE = true;
+const TEST_MODE = false;
 
 const phases = [
   {
     bgImage: 'Images/album1.png',
     albumTitle: 'Only The Devil Can Stop Us',
     bodyClass: 'phase-1',
-    dropTime: new Date(Date.now() + 20000)
+    dropTime: new Date('2026-06-29T23:00:00Z')
   },
   {
     bgImage: 'Images/album2.png',
     albumTitle: 'Born to Rule',
     bodyClass: 'phase-2',
-    dropTime: new Date(Date.now() + 40000)
+    dropTime: new Date('2026-07-06T23:00:00Z')
   },
   {
     bgImage: 'Images/album3.png',
     albumTitle: 'Wisdom & War',
     bodyClass: 'phase-3',
-    dropTime: new Date(Date.now() + 60000)
+    dropTime: new Date('2026-07-13T23:00:00Z')
   },
   {
     bgImage: '',
     albumTitle: 'Something Is Coming',
     bodyClass: 'phase-4',
-    dropTime: new Date(Date.now() + 80000)
+    dropTime: new Date('2026-07-20T23:00:00Z')
   }
 ];
 
