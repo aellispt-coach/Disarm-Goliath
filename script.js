@@ -3,19 +3,19 @@ const TEST_MODE = false;
 const phases = [
   {
     bgImage: 'Images/album1.png',
-    albumTitle: 'Only The Devil Can Stop Us',
+    albumTitle: 'No Moon, No Power',
     bodyClass: 'phase-1',
     dropTime: new Date('2026-06-29T23:00:00Z')
   },
   {
     bgImage: 'Images/album2.png',
-    albumTitle: 'Born to Rule',
+    albumTitle: 'Find The Betrayer',
     bodyClass: 'phase-2',
     dropTime: new Date('2026-07-06T23:00:00Z')
   },
   {
     bgImage: 'Images/album3.png',
-    albumTitle: 'Wisdom & War',
+    albumTitle: 'Look Me In The Eye Before You Die',
     bodyClass: 'phase-3',
     dropTime: new Date('2026-07-13T23:00:00Z')
   },
