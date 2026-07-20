@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Metamorphous&family=Oswald:wght@300;400;500;600;700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -80,7 +80,7 @@ body::after {
 }
 
 #album-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(16px, 3.5vw, 28px);
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -107,7 +107,7 @@ body::after {
 }
 
 .time-number {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(52px, 14vw, 115px);
   line-height: 1;
   color: #f0e8d0;
@@ -116,7 +116,7 @@ body::after {
 }
 
 .time-sep {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(44px, 12vw, 96px);
   color: rgba(240, 232, 208, 0.2);
   line-height: 1;
@@ -145,10 +145,10 @@ body::after {
 }
 
 .reveal-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(48px, 12vw, 110px);
-  color: #ccaa00;
-  text-shadow: 0 0 80px rgba(204, 170, 0, 0.6);
+  font-family: 'Metamorphous', 'Oswald', serif;
+  font-size: clamp(52px, 13vw, 120px);
+  color: #c8102e;
+  text-shadow: 0 0 80px rgba(200, 16, 46, 0.6);
   animation: pulse 2.5s ease infinite;
 }
 
@@ -161,12 +161,42 @@ body::after {
   color: rgba(240, 232, 208, 0.45);
 }
 
+.reveal-enter {
+  margin-top: 12px;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(16px, 2.5vw, 20px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c8102e;
+  text-decoration: none;
+  border: 1px solid #c8102e;
+  padding: 12px 30px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  animation: fadeUp 1s ease 0.6s both;
+}
+.reveal-enter:hover {
+  background: #c8102e;
+  color: #0a0a0a;
+  transform: translateY(-2px);
+}
+
+.reveal-redirect {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(240, 232, 208, 0.28);
+  margin-top: 4px;
+  animation: pulse 2s ease infinite;
+}
+
 body.phase-4 {
   background: #000;
 }
 
 body.phase-4 #bg-overlay {
-  background: radial-gradient(ellipse at center, rgba(50, 38, 0, 0.35) 0%, rgba(0, 0, 0, 1) 70%);
+  background: radial-gradient(ellipse at center, rgba(90, 12, 16, 0.4) 0%, rgba(0, 0, 0, 1) 70%);
 }
 
 @keyframes fadeDown {
@@ -200,11 +230,11 @@ body.phase-4 #bg-overlay {
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
-    text-shadow: 0 0 80px rgba(204, 170, 0, 0.6);
+    text-shadow: 0 0 80px rgba(200, 16, 46, 0.6);
   }
   50% {
     opacity: 0.8;
-    text-shadow: 0 0 120px rgba(204, 170, 0, 0.9), 0 0 40px rgba(204, 170, 0, 0.4);
+    text-shadow: 0 0 120px rgba(200, 16, 46, 0.9), 0 0 40px rgba(200, 16, 46, 0.4);
   }
 }
 

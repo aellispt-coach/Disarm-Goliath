@@ -96,6 +96,13 @@ function tick() {
       countdownEl.style.display = 'none';
       albumTitleEl.style.display = 'none';
       finalRevealEl.classList.add('visible');
+      // The single is live — flash the reveal, then open the full site.
+      if (!finalRevealEl.dataset.redirecting) {
+        finalRevealEl.dataset.redirecting = '1';
+        setTimeout(function () {
+          window.location.href = 'site/index.html';
+        }, 4500);
+      }
     }
     return;
   }

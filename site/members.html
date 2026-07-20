@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Band — Disarm Goliath</title>
+  <meta name="description" content="Meet the members of Disarm Goliath.">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div id="grain"></div>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">
+      <img src="../Images/logo.png" alt="Disarm Goliath logo">
+      <span>Disarm Goliath</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">≡</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="news.html">News</a>
+      <a href="members.html" class="active">Band</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="reveal">
+      <div class="eyebrow">Who We Are</div>
+      <h1 class="section-title">The Band</h1>
+    </div>
+
+    <div class="members-grid reveal">
+      <article class="member">
+        <div class="member-photo" data-photo="Bell" data-alt="Steven Bell"><span class="member-initials">SB</span></div>
+        <div class="member-body">
+          <div class="member-role">Vocals</div>
+          <div class="member-name">Steven Bell</div>
+          <div class="member-alias">“The Banshee”</div>
+          <p class="member-bio">The voice of Disarm Goliath.</p>
+        </div>
+      </article>
+
+      <article class="member">
+        <div class="member-photo" data-photo="Beville" data-alt="Steve Beville"><span class="member-initials">SB</span></div>
+        <div class="member-body">
+          <div class="member-role">Lead &amp; Rhythm Guitar</div>
+          <div class="member-name">Steve Beville</div>
+          <p class="member-bio">Lead and rhythm.</p>
+        </div>
+      </article>
+
+      <article class="member">
+        <div class="member-photo" data-photo="Ellis" data-alt="Ant Ellis"><span class="member-initials">AE</span></div>
+        <div class="member-body">
+          <div class="member-role">Rhythm &amp; Lead Guitar</div>
+          <div class="member-name">Ant Ellis</div>
+          <p class="member-bio">Rhythm and lead.</p>
+        </div>
+      </article>
+
+      <article class="member">
+        <div class="member-photo" data-photo="Surch" data-alt="Steve Surch"><span class="member-initials">SS</span></div>
+        <div class="member-body">
+          <div class="member-role">Bass</div>
+          <div class="member-name">Steve Surch</div>
+          <p class="member-bio">Bass.</p>
+        </div>
+      </article>
+
+      <article class="member memoriam">
+        <div class="member-photo" data-photo="Wade" data-alt="Karl Wade"><span class="member-initials">KW</span></div>
+        <div class="member-body">
+          <div class="member-role">Drums</div>
+          <div class="member-name">Karl Wade</div>
+          <div class="member-rip">In Memory · R.I.P.</div>
+          <p class="member-bio">Forever part of Disarm Goliath. Rest in peace.</p>
+        </div>
+      </article>
+    </div>
+
+    <!--
+      Member photos: drop image files into the Images folder named by last name —
+      Bell, Beville, Ellis, Surch, Wade. Any common format works
+      (.jpg / .jpeg / .png / .webp) — site.js finds them automatically and the
+      grayscale-to-colour treatment in site.css keeps mismatched grading consistent.
+      Until a photo is added, the initials placeholder is shown.
+    -->
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">
+        <img src="../Images/logo.png" alt="Disarm Goliath">
+        <span>Disarm Goliath</span>
+      </a>
+      <div class="footer-links">
+        <a href="music.html">Music</a>
+        <a href="news.html">News</a>
+        <a href="members.html">Band</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <small>© <span data-year>2026</span> Disarm Goliath. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
